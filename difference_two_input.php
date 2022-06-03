@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <h1 class="text-center">Calculate The Differnce Between Two Values</h1>
+    <h1 class="text-center">Calculate The Differnce Between Two Dates</h1>
     <div class="container">
     <form action="">
         <div class="form-group">
