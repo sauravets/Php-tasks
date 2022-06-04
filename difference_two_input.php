@@ -1,3 +1,6 @@
+<?php
+include 'result.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,16 +21,16 @@
 <body>
     <h1 class="text-center">Calculate The Differnce Between Two Dates</h1>
     <div class="container">
-    <form action="">
+    <form action="" method="POST">
         <div class="form-group">
             <label for="first_input">Input1:</label>
-            <input type="text" name="input1" id="input1" class="form-control" placeholder="Type First Value"><br>
+            <input type="text" name="input1" class="form-control inputs" placeholder="Type First Value"><br>
         </div>
         <div class="form-group">
             <label for="second_input">Input2:</label>
-            <input type="text" name="input2" class="form-control" placeholder="Type Second Value"><br>
+            <input type="text" name="input2" class="form-control inputs" placeholder="Type Second Value"><br>
         </div>
-        <input type="button" value="Result" class="btn btn-primary">
+        <button type="submit" name="result" class="btn btn-primary">Result</button>
     </form>
     </div>
 </body>
