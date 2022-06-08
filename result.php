@@ -1,14 +1,29 @@
 <?php
+class Calculation {
 
-if(isset($_POST['result'])){
-    $first_input = $_POST['input1'];
-    $second_input = $_POST['input2'];
-    $diff = abs(strtotime($first_input) - strtotime($second_input));
+   public function time_difference(){
+    if(isset($_POST['result'])){
+      $first_input = $_POST['input1'];
+      $second_input = $_POST['input2'];
 
-    $week = floor($diff / (7*60*60*24));
-    $days = floor(($diff - $week * 7*60*60*24) / (60*60*24));
-    $hours = floor(($diff - $week * 7*60*60*24 - $days*60*60*24)/ (60*60));
+      $pieces = explode(" ",$first_input);
+      $pieces2 = explode(" ",$second_input);
 
-    printf("%d week, %d days, %d hours\n", $week, $days, $hours);
+      $add = ((int)$pieces[0] * 40) + ((int)$pieces[1] * 8) + ((int)$pieces[2]);
+      $add1 = ((int)$pieces2[0] * 40) + ((int)$pieces2[1] * 8) + ((int)$pieces2[2]);
+      echo "<b>";
+      echo "First input is:" . $add . " hour" . "<br>";
+      echo "Second input is:" . $add1 . " hour";
+      echo "<br>";
+
+      echo "total result is:" . $add - $add1 ." hour";
+      echo "</b>";
+    
+    }
+    }
 }
+
+$obj = new Calculation();
+
+
 

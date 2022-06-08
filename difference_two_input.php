@@ -1,5 +1,6 @@
 <?php
 include 'result.php';
+$obj->time_difference();
 ?>
 <!DOCTYPE html>
 <html lang="en">
