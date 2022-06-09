@@ -22,16 +22,17 @@ $obj->time_difference();
 <body>
     <h1 class="text-center">Calculate The Differnce Between Two Dates</h1>
     <div class="container">
-    <form action="" method="POST">
+    <form action="" method="POST" id="myForm">
         <div class="form-group">
             <label for="first_input">Input1:</label>
-            <input type="text" name="input1" class="form-control inputs" placeholder="Type First Value"><br>
+            <input type="text" name="input1" id="first_input" class="form-control inputs" value="<?php if (
+     isset($_POST['first_input']) && !empty($_POST['first_input'])) { echo $first_input; } ?>" placeholder="Type First Value"><br>
         </div>
         <div class="form-group">
             <label for="second_input">Input2:</label>
-            <input type="text" name="input2" class="form-control inputs" placeholder="Type Second Value"><br>
+            <input type="text" name="input2" id="second_input" class="form-control inputs" placeholder="Type Second Value"><br>
         </div>
-        <button type="submit" name="result" class="btn btn-primary">Result</button>
+        <button type="submit" name="result" class="btn btn-primary" id="result_btn" disabled = "disabled" >Result</button>
     </form>
     </div>
 </body>
